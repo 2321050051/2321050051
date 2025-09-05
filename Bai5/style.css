@@ -1,0 +1,30 @@
+body{
+    margin: 0px
+}
+nav{
+    background-color:#0c4ca3;
+}
+ul {
+    display: flex;
+    gap:20px;
+    list-style: none;
+}
+
+
+.border {
+    border-right: 1px solid grey;
+}
+.danhmuc-lienket {
+    color:white;
+    text-decoration-line: none;
+}
+.banner{
+    display: flex;
+    justify-content: center;
+}
+.anh-qc{
+    display: flex;
+    justify-content: space-between;
+}
+
+
