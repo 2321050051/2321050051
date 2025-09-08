@@ -1,10 +1,12 @@
 body{
     margin: 0px
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
 }
 nav{
     background-color:#0c4ca3;
 }
-ul {
+nav ul {
     display: flex;
     gap:20px;
     list-style: none;
@@ -18,13 +20,283 @@ ul {
     color:white;
     text-decoration-line: none;
 }
-.banner{
+.banner {
     display: flex;
     justify-content: center;
 }
-.anh-qc{
+.anh-qc {
     display: flex;
     justify-content: space-between;
 }
 
+.tintuc {
+    display: flex;
+    justify-content: center;
+}
 
+.anh {
+    width: 270px;
+    margin: auto;
+    justify-content: space-around;
+    height: 200px;
+    margin-right: 20px;
+} 
+
+.table {
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+
+.tintuccon li {
+  font-size: 15px;
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+
+.quy {
+    display: flex;
+    justify-content: space-between;
+}
+.thongbao-box {
+    background: #f0f2f5;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+.thongbao-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.thongbao-header h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0056b3;
+    border-left: 5px solid #0056b3;
+    padding-left: 10px;
+}
+
+.thongbao-content {
+    display: flex;
+    gap: 20px;
+}
+
+.thongbao-left {
+    text-align: center;
+}
+
+.thongbao-left img {
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+}
+
+.thongbao-left p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.thongbao-right {
+    flex: 2;
+}
+
+.thongbao-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.thongbao-right ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.thongbao-right ul li a {
+    color: #060707;
+    text-decoration: none;
+}
+
+.tuyensinh-box {
+    
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+.tuyensinh-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tuyensinh-header h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0056b3;
+    border-left: 5px solid #0056b3;
+    padding-left: 10px;
+}
+
+.tuyensinh-header a {
+    font-size: 14px;
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.tuyensinh-content {
+    display: flex;
+    gap: 20px;
+}
+
+.tuyensinh-item {
+    text-align: center;
+}
+
+.tuyensinh-item img {
+    width: 100%;
+    max-width: 250px;
+    border: 1px solid #ccc;
+}
+
+.tuyensinh-item p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+
+.sinhvien-box {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+.sinhvien-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.sinhvien-header h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0056b3;
+    border-left: 5px solid #0056b3;
+    padding-left: 10px;
+}
+
+.sinhvien-header a {
+    font-size: 14px;
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.sinhvien-content {
+    display: flex;
+    gap: 20px;
+}
+
+.sinhvien-item {
+    text-align: center;
+}
+
+.sinhvien-item img {
+    width: 100%;
+    max-width: 250px;
+    border: 1px solid #ccc;
+}
+
+.sinhvien-item p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+
+.hoptac-box {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+.hoptac-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.hoptac-header h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0056b3;
+    border-left: 5px solid #0056b3;
+    padding-left: 10px;
+}
+
+.hoptac-header a {
+    font-size: 14px;
+    color: #0056b3;
+    text-decoration: none;
+}
+
+
+.hoptac-content {
+    display: flex;
+    gap: 20px;
+}
+
+.hoptac-item {
+    text-align: center;
+}
+
+.hoptac-item img {
+    width: 100%;
+    max-width: 250px;
+    border: 1px solid #ccc;
+}
+
+.hoptac-item p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+}
+.video{
+    background-color: #080808;
+    color:#f7f3f3;
+    display: flex;
+}
+
+.vanban div{
+    padding:20px;
+    
+}
+.vanban {
+    border:2px white;
+}
+
+.cuoitrang {
+    display:flex;
+    
+}
+
+.bando {
+    background-color: #0c4ca3;
+    color:#ddd;
+}
