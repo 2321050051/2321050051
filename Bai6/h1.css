@@ -2,25 +2,78 @@ body{
     background:black;
     color:white;
 }
-.timkiem{
-    justify-content:center;
-}
-.box{
-    padding:10px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-}
-.trai{
-    width:20%;
-    background:#000;
-    padding:15px;
-   
-}
 .home{
-    display:flex;
+    display: flex;
     justify-content: center;
 }
-.trangchu{
+input{
+    border-radius: 25px;  /* bo tròn */
+}
+header{
     display:flex;
-    justify-content: space-between;
+}
+.body-left-top{
+    width: 20%;
+    height: 100vh;
+    background:#5d5d5d;
+    border-radius: 5px;
+}
+.body-center-top {
+  padding: 10px 0;
+}
+.body-center-top-items {
+  display: flex;
+  cursor: pointer;
+  gap: 10px;
+}
+.items {
+  color: white;
+  font-size: 16px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #5d5d5d;
+  border-radius: 25px;
+}
+/*card ảnh*/
+.card{
+    display: flex;
+    align-items: center; /* Căn giữa  */
+    color: white;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    box-sizing: border-box;
+    width:200px ;
+    height: 60px;
+ /* gap: 30px; */
+}
+.card span{
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+}
+.card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  /* margin-bottom: 10px; */
+}
+.card span {
+  font-size: 14px;
+  text-align:center;
+}
+.all{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  padding: 10px;
+  max-height: 150px; 
+}
+.body-right-top{
+    width: 20%;
+    height: 100vh;
+    background:#5d5d5d;
+    border-radius: 5px;
+}
+.bentren{
+    color:#8d8a8a
 }
