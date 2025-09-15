@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(183, 184, 185);
+}
+.container{
+    justify-content: center;
+    margin:auto;
+    width:140vh;
+    height: 90vh;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5vh ;
+    display:flex
+}
+.bentrai{
+    width: 70vh;
+    height: 90vh;
+    background:#f08ad1;
+}
+.bentrai img{
+    width: 40vh;
+    height: 50vh;
+}
+.anh{
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+}
+.benphai{
+    width: 70vh;
+    height: 90vh;
+    background:#ec8080;
+}

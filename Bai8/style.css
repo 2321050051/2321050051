@@ -1,0 +1,20 @@
+body{
+    background-color: rgb(231, 229, 229);
+}
+.tieude{
+    display:flex;
+    justify-content: center;
+    color:blue;
+}
+.container{
+    justify-content: center;
+    margin:auto;
+    width:70vh;
+    height:80vh;
+    background-color: white;
+    border-radius: 5px;
+}
+.dau{   
+    margin-top:20px; 
+    border-bottom:2px solid gray;
+}
