@@ -1,0 +1,74 @@
+.dongdau{
+    display:flex;
+    justify-content: space-between;
+    height:40px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.dongdau img{
+    width:80px;
+    height:100%;
+}
+.dongdauphai{
+    display:flex;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.dongdauphai-1{
+    padding: 4px 10px;
+    border: 1px solid white;
+    border-radius: 15px;
+    background: blue;
+    color:white;
+}
+.dongdauphai-2{
+    padding: 4px 10px;
+    border: 1px solid blue;
+    border-radius: 15px;
+    color:blue;
+}
+.dongdauphai-3{
+    padding: 4px 10px;
+    border: 1px solid white;
+}
+.donghai{
+    width:100%;
+    height:40vh;
+    background:rgb(208, 210, 247)
+}
+.donghai-13{
+    color:blue
+}
+.donghai-2{
+    display:flex;
+}
+.donghai-21{
+    padding: 4px 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background: rgb(250, 101, 31);
+    color:white;
+}
+.donghai-22{
+    padding: 4px 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background: rgb(255, 123, 0);
+    color:white;
+    margin-left: 10px;
+}
+.dongba{
+    width:100%;
+    height:60vh;
+    background:rgb(220, 220, 243)
+}
+.bang{
+    border="1";
+    width="70%";
+}
+.omot{
+    background:rgb(220, 188, 250)
+}
+.ohai{
+    background:rgb(165, 160, 236)
+}

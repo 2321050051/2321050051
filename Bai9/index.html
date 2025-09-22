@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script src="script.js"></script>
+    <script>
+        //để viết chú thích js dùng kí tự
+        document.writeln("hello world" + "<br>"); // JavaScript dùng dấu + để nối chuỗi
+
+        let hoten = "Nguyen Duy Tuan";
+        document.writeln(hoten + "<br>");
+
+        //Hằng
+        const pi = 3.14;
+
+        let soThuNhat = 10;
+        let soThuHai = "10";  //"5" ko cộng được
+        let ketQua = 0;
+        // +
+        ketQua = soThuNhat % soThuHai;
+        ketQua--; //in ra trước rồi mới cộng/trừ thêm
+        // = -, *, /, %(lấy phần dư),  
+        document.writeln(ketQua);
+
+        soThuNhat += soThuHai;
+        //soThuNhat = soThuNhat + soThuHai
+        document.writeln(soThuNhat != soThuHai);
+        //== chỉ xét giá trị; === xét cả giá trị và kiểu giữ liệu;
+
+        let thongTinSinhVien = {
+            hoTen: "Nguyen Duy Tuan",
+            tuoi: 20,
+            gioiTinh: true,
+            lop: "Khoa học máy tính k68",
+        }
+
+        let diaChiDuyTuan = {
+            thanhPho: "Bắc Ninh",
+            quanHuyen: "Yên Phong",
+            xa: "Tam Đa",
+            thon: "Đại Lâm",
+        }
+
+        let namNay = 2025;
+
+        thongTinSinhVien.diaChi = diaChiDuyTuan;
+
+        document.writeln("hello bạn " 
+            + thongTinSinhVien.hoTen 
+            +" lớp "
+            + thongTinSinhVien.lop
+            + " nhà ở thôn "
+            + thongTinSinhVien.diaChi.thon
+            +" xã "
+            + thongTinSinhVien.diaChi.xa
+            +" huyện "
+            + thongTinSinhVien.diaChi.quanHuyen
+            +" tỉnh "
+            + thongTinSinhVien.diaChi.thanhPho
+            +" năm sinh "  
+            + (namNay - thongTinSinhVien.tuoi)
+            +"<br>"
+            );
+
+            let soThuBa = "10";
+
+            soThuBa = parseInt(soThuBa);
+
+            document.writeln(typeof (soThuBa));
+
+
+
+    </script>
+</body>
+</html>
