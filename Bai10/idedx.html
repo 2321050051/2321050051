@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="script.js"></script>
+    <script>
+        
+        let thongTinKH ={
+            maDonHang: "tuan",
+            hoTen: "Nguyễn Duy Tuấn",
+            soDienThoai: "0969621147",
+            trangThaiTVThanThiet: true,
+            danhSachSanPham:{
+                sp1: {
+                    maSanPham: "1",
+                    tenSanPham: "cà phê",
+                    soLuong: 5,
+                    giaTien: 10000,
+                },
+                sp2: {
+                    maSanPham: "2",
+                    tenSanPham: "matcha",
+                    soLuong: 3,
+                    giaTien: 15000,
+                },
+                sp3: {
+                    maSanPham: "3",
+                    tenSanPham: "trà sữa",
+                    soLuong: 4,
+                    giaTien: 20000,
+                },
+            },
+            trangThai: false,
+            diaChi: "Cổ Nhuế 2, Hà Nội",
+        };
+
+        let danhSachSP = thongTinKH.danhSachSanPham ,
+            tongSP1 = danhSachSP.sp1.soLuong * danhSachSP.sp1.giaTien;
+            tongSP2 = danhSachSP.sp2.soLuong * danhSachSP.sp2.giaTien;
+            tongSP3 = danhSachSP.sp3.soLuong * danhSachSP.sp3.giaTien;
+            tongALLSP = tongSP1 + tongSP2 + tongSP3;
+        
+        document.writeln(tongALLSP +"<br>");
+
+        //STRING
+        let hoTen = "Nguyễn Duy Tuấn";
+        document.writeln(hoTen.length + "<br>"); //đếm cả dấu cách, đo độ dài của chuỗi
+
+        let myString = "Hello World";
+        document.writeln(myString[4] + "<br>"); //lấy ký tự
+        document.writeln(myString.slice(1,4) + "<br>");//căt chuối con
+        document.writeln(myString.replace("Hello","hi") +"<br>"); //thế chuỗi
+        //đổi chữ hoa thành chữ thường//
+        document.writeln(myString.toLocaleLowerCase() +"<br>");
+        //ktra kí tự có tồn tại hay không//
+        //index có :vị trí ko:-1
+        //include có:true ko:false
+        document.writeln(myString.indexOf("i"));
+        document.writeln(myString.includes("e") + "<br>");
+        //tách chuỗi thành 1 mảng
+        document.writeln(myString.split('e').length + "<br>");
+        //ktra chuỗi có bắt đầu bằng 1 ký tự nào không
+        document.writeln(myString.startsWith('hello').length + "<br>");
+
+        var pi = 3.14159;
+        pi.toFixed(2);
+        document.writeln(pi + "<br>");
+
+        document.writeln(isNaN("10") + "<br>"); //is not a number
+
+        let toDay = new Date("2005-10-30"); //có thể chọn ngày giờ mong muốn
+        
+        // lấy ra năm: getFullYear
+        // lấy ra tháng: getMonth
+        // Lấy ra ngày: getDate
+        document.writeln(toDay + "<br>");
+        document.writeln(toDay.getMonth());
+
+
+    </script>
+</body>
+</html>
