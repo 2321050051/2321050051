@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mảng</title>
+</head>
+<body>
+    <script>
+        //Mảng
+        let arr =[1,2,3,4,'a','b','c',2,3];
+        let ten ='ten';
+        let thongTin = {
+            ten: ten
+        }
+        document.writeln(Array.isArray (arr) + "<br>"); //ktra 1 biến xem có phải mảng ko, tên của biến 'let arr=[];'
+        document.writeln(arr.length + "<br>"); //ktra độ dài của mảng
+        document.writeln(arr[2] + "<br>");
+        document.writeln(arr.indexOf(3) + "<br>"); //ktra trong mảng có phần tử mình cần tìm kiếm ko và nó trả ra phần tử ở trước, ko có nó trả ra -1
+        document.writeln(arr.lastIndexOf(3) + "<br>"); //giống trên nhưng trả ra vị trí cuối trước
+        arr[3] = 6;
+        document.writeln(arr + "<br>");
+
+        //let a, b, c, d;
+        //a = [1,2,3];
+        //b = "JavaScript";
+        //c = [42, "JS"];
+        //d = a.concat(b, c); //concat dùng để nối các mảng với nhau
+        //document.writeln(d + "<br>");
+        //d = d.join("/");
+        //document.writeln(d +"<br>");
+        //d.pop(); //xóa phần tử cuối
+        //d.push("Tuấn"); //thêm phần tử
+        //d.reverse() //đảo phần tử thêm lên đầu
+        //document.writeln(d + "<br>");
+
+        //d.shift() //xóa phần tử đầu tiên
+        //d.unshift() //thêm phần tử vào đầu mảng
+
+
+        let so = "100000000000000000000000001";
+        let soCuoi = parseInt(so[so.length - 1]);
+        if (soCuoi%2==0){
+            document.writeln(so + " là số chẵn");
+        }
+        else {
+            document.writeln(so + " là số lẻ");
+        }
+
+
+        let now = new Date().getHours;
+        //5->10: Chào buổi sáng;
+        //10->13: Chào buổi trưa;
+        //13->17: Chào buôit chiều;
+        //17->22: Chào buổi tối;
+        //còn lại: Chào buổi đêm;
+        //if(now >= 5 && now < 10){
+          //  document.writeln("Chào buổi sáng");
+        //}
+        //else if(now >= 10 && now < 13){
+          //  document.writeln("Chào buổi trưa");   
+        //}
+        //else if(now >= 13 && now < 17){
+          //  document.writeln("Chào buổi chiều");   
+        //}
+        //else if(now >= 17 && now < 22){
+          //  document.writeln("Chào buổi tối");   
+        //}
+        //else {
+          //  document.writeln("Chào buổi đêm");  
+        //}
+
+        //a,b,c
+        //tổng = điểm a nhân 0.6 + điểm b nhân 0.3 + điểm c nhân 0.1
+        //8 đến 10: a
+        //7 đến 8: b
+        //5 đến 7: c
+        //4 đến 5: d
+        //nhỏ hơn 4: f
+        let a,b,c;
+        a=10, b=9, c=8;
+        let tong = a*0.6 + b*0.3 + c*0.1;
+        if ( tong >= 8 && tong<=10){
+            document.writeln("A");
+        }
+        else if ( tong >= 7 && tong<8){
+            document.writeln("B");
+        }
+        else if ( tong >= 5 && ttong<7){
+            document.writeln("C");
+        }
+        else if ( tong >= 4 && tong<5){
+            document.writeln("D");
+        }
+        else {
+            document.writeln("F");
+        }
+        
+    </script>
+</body>
+</html>
