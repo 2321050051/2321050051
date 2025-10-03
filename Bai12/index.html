@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        let d = new Date();
+        let theDay = d.getDay();//thứ 6 -> 5
+        switch (theDay){
+            case 5:
+                document.writeln("Firday finally + <br>");
+                break;
+            case 6:
+                document.writeln("Super Saturday");
+                break;
+            case 0:
+                document.writeln("sleep Sunday");
+                break;  
+            case 1:
+            case 2:
+            case 3:
+                document.writeln("im a looking forward to this weekend");
+                break;
+            default:
+                document.writeln("im a looking forward to this weekend")      
+        }
+       
+        // for (let i = 1;i <= 5 ; i++){
+        //     document.writeln(i+" Tuấn hihi + <br>");
+        // }
+        // let danhSach = ["Dương Trần Nhật	Anh ", "Dương Vũ	Anh ", "Trần Vũ Hải	Anh ", "Bùi Ngọc	Bích ", "Phạm Quốc	Bình ", "Nguyễn Văn	Chung ", "Hoàng Mạnh	Cường ", "Ngô Hoàng	Dương ", "Phạm Văn	Đại ", "Nguyễn Đình	Đạt ", "Phạm	Đức ", "Vũ Trung	Đức ", "Phạm Hương	Giang ", "Phạm Quang	Hậu ", "Trần Văn	Hiệp ", "Nguyễn Văn	Hoàng ", "Phạm Quốc	Hoàng ", "Phạm Thị	Huế ", "Trần Công	Hùng ", "Đào Thế	Huy ", "Đỗ Quang	Huy ", "Phạm Quang	Huy ", "Phạm Thành	Khang ", "Bùi Văn	Khiêm ", "Nguyễn Tiến	Khởi ", "Đỗ Trung	Kiên ", "Vương Hà	Linh ", "Đào Quang	Lộc ", "Ngô Gia	Lộc ", "Bùi Văn	Mạnh ", "Nguyễn Văn	Mạnh ", "Phan Văn	Mạnh ", "Trương Công	Minh ", "Đỗ Thành	Nam ", "Lê Duy	Nam ", "Nguyễn Hoàng	Nam ", "Nguyễn Anh	Quân ", "Cao Thị Thu	Quyên ", "Phạm Gia	Tài ", "Nguyễn Thị Thanh	Tâm © ", "Nguyễn Đình	Thái ", "Lưu Tiến	Thành ", "Trần Văn	Thành ", "Nguyễn Thị	Thúy ", "Nguyễn Thị	Thúy ", "Bùi Duy	Tiến ", "Nguyễn Văn	Tiến ", "Đỗ Văn	Trung ", "Phạm Đan	Trường ", "Lê Thị Cẩm	Tú ", "Phan Văn	Tuân ", "Cao Thái	Tuấn ", "Nguyễn Duy	Tuấn ", "Nguyễn Huy	Tuấn ", "Thiều Văn	Việt ", "Nguyễn Kiều	Vy"]; 
+        // for (let i = 1;i < danhSach.length ; i++){
+        //     document.writeln(i + " " + danhSach[i] + "<br>");
+        // }
+        // let dem = 0;
+        // for (let i = 0;i < danhSach.length ; i++){
+        //     if (danhSach[i].toLocaleLowerCase().startsWith("nguyễn")==true){
+        //         dem=dem+1;
+        //     }
+        // }
+        // document.writeln(dem + " người họ Nguyễn");
+        //toLocaleLowerCase: đếm ko cần viết hoa
+
+
+        //let i=();
+        //white(i<=10){
+          //  document.white("The number is" + i)
+          //  document.white("<br/>")
+          //  i=i+1
+        //}
+
+
+        // alert("Hello"); //thông báo trang lỗi....
+
+
+        // let result = confirm("Press a button");
+
+        // if (result ==true) {
+        //     document.writeln("Bấm OK");
+        // }
+        // else {
+        //     document.writeln("Bấm Cencel");
+        // }
+
+        // let result2 = prompt ("Nhập họ tên", "Ví dụ: ABC");
+        // document.writeln(result2);
+
+        function sayHello(){
+            document.writeln("Xin chào")
+        }
+        sayHello();
+        sayHello();
+        sayHello();
+
+        let ten = prompt ("Nhập họ tên", "Ví dụ: ABC");
+        let namSing = prompt ("Nhập năm sinh", "Ví dụ: ABC");
+        function sayHello2(ten, namSinh){
+            document.writeln("Xin chào " + ten + " sinh năm " + namSinh)
+        }
+        sayHello2("Tuấn", 2005)
+    </script>
+</body>
+</html>
