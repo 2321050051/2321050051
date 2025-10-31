@@ -17,6 +17,9 @@
     </div>
     <div>
         <button onclick="tinhTong()">Tính tổng</button>
+        <button onclick="tinhTong()">Tính tổng</button>
+        <button onclick="tinhTong()">Tính tổng</button>
+        <button onclick="tinhTong()">Tính tổng</button>
         <div>
             Kết quả: <input type="number" id="ketQua" class="ket-qua">
         </div>
@@ -38,10 +41,11 @@
         //cothamso(so);
         //document.writeln(a());
 
-        function tinhTong(){
+        function tinhToan(phepTinh){
             let soThuNhat = parseFloat(document.getElementById('soThuNhat').value);
             let soThuHai = parseFloat(document.getElementById('soThuHai').value);
             let canhBao = "";
+            let ketQua = 0;
             if (!soThuNhat){
                 canhBao += "Vui lòng nhập vào số thứ 1";
             }
@@ -51,9 +55,20 @@
             if (canhBao){
                 alert(canhBao);
             }
-            let tong = soThuNhat + soThuHai;
+            if (phepTinh == 'cong'){
+                ketQua = soThuNhat + soThuHai;
+            }
+            else if (phepTinh == 'tru'){
+                ketQua = soThuNhat - soThuHai;
+            }
+            else if (phepTinh == 'nhan'){
+                ketQua = soThuNhat * soThuHai;
+            }
+            else if (phepTinh == 'chia'){
+                ketQua = soThuNhat / soThuHai;
+            }
            
-            document.getElementById('ketQua').value = tong;
+            document.getElementById('ketQua').value = ketQua;
         }
         
     </script>

@@ -60,6 +60,43 @@
             <source src="2023.mp4" type="video/mp4">
         </video>
     </div>
-       
+
+    
+    <h1>Tính trung bình</h1>
+    <div>
+        số thứ nhất
+        <input type="number" id="soThuNhat">
+    </div>
+    <div>
+        số thứ hai
+        <input type="number" id="soThuHai">
+    </div>
+    <div>
+        <button onclick="tinhTB()">Tính TB</button>
+        <div>
+            Kết quả
+            <input type="number" id="ketQua" class="ket-qua">
+        </div>
+    </div>
+    <script>
+        function tinhTB(){
+            let soThuNhat = parseFloat(document.getElementById('soThuNhat').value);
+            let soThuHai = parseFloat(document.getElementById('soThuHai').value);
+            let canhBao ="";
+            if (!soThuNhat){
+                canhBao += "nhập số thứ nhất";
+            }
+            if (!soThuHai){
+                canhBao += "nhập số thứ hai";
+            }
+            if (canhBao){
+                alert(canhBao);
+            }
+            let tinhTB = (soThuNhat + soThuHai) /2;
+
+            document.getElementById('ketQua').value = tinhTB;
+        }
+    </script>
+    
     </body>
 </html>
