@@ -6,10 +6,22 @@
     <title>Document</title>
 </head>
 <style>
+    body{
+        background-color: rgb(240, 206, 217);
+    }
     .container{
         display:flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        margin:auto;
+        width:90vh;
+        height:115vh;
+        background-color: pink;
+        border-radius: 5px;
+    }
+    input{
+        border-radius: 10px;
     }
 </style>
 <body>
@@ -17,19 +29,21 @@
         <div>
             <h1>Tính chỉ số BMI</h1>
         </div>
-        <div>
-            Nhập chiều cao
+        <div class="nhap">
+            <div>
+            Nhập chiều cao (m)
             <input type="number" id="chieuCao">
-        </div>
-        <div>
-            Nhập cân nặng
-            <input type="number" id="canNang">
-        </div>
-        <div>
-            <button onclick="kiemTra()">Kiểm tra chỉ số BMI</button>
+            </div>
+            <div>
+                Nhập cân nặng (kg)
+                <input type="number" id="canNang">
+            </div>
+            <div>
+                <button onclick="kiemTra()">Kiểm tra chỉ số BMI</button>           
+            </div>
             <div>
                 Kết quả: <input type="number" id="ketQua" class="ket-qua">
-            </div>           
+            </div>
         </div>
         <div>
             <img class="anh" src="binhthuong.jpg">
@@ -37,8 +51,8 @@
     </div>
     <script>
         function kiemTra(){
-            let chieuCao = parseFloat(document.getElementById('chieuCao').value);
-            let canNang = parseFloat(document.getElementById('canNang').value);
+            let chieuCao = parseFloat(document.getElementById("chieuCao").value);
+            let canNang = parseFloat(document.getElementById("canNang").value);
             let canhBao ="";
             if (!chieuCao){
                 canhBao += "Vui lòng nhập vào chiều cao";
@@ -48,17 +62,30 @@
             }
             if (canhBao){
                 alert(canhBao);
+                return;
             }
             let ketQuaBMI = canNang / (chieuCao * chieuCao);
 
-            document.getElementById('ketQua') = ketQuaBMI;
-        }
-        function doiCheDo(){
-            if (ketQuaBMI >= 0 && <= 18.5 ){
-                document.getElementsByClassName('anh')[0].src='thieucan.jpg'
+            document.getElementById('ketQua').value = ketQuaBMI.toFixed(2);
+
+            let doiAnh = parseFloat(ketQuaBMI);
+            if (ketQuaBMI < 18.5){
+                document.getElementsByClassName("anh")[0].src= 'thieucan.jpg';
             }
-            else if (ketQuaBMI >= 25 && <= 29.9)
+            else if ( ketQuaBMI >= 18.5 && ketQuaBMI < 24.9){
+                document.getElementsByClassName("anh")[0].src= 'binhthuong.jpg';
+            }
+            else if ( ketQuaBMI >=25 && ketQuaBMI <29.9){
+                document.getElementsByClassName("anh")[0].src= 'thuacan.jpg';
+            }
+            else if ( ketQuaBMI >=30 && ketQuaBMI <39.9){
+                document.getElementsByClassName("anh")[0].src= 'beophicapdo1-2.jpg';
+            }
+            else {
+                document.getElementsByClassName("anh")[0].src= 'beophinang.jpg';
+            }
         }
+        
 
     </script>
 </body>
