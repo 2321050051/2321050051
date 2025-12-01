@@ -6,16 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-        session_start();
-        if(!isset($_SESSTION["username"])){
-            header(location: 'trangchu.php')
-        }
-    ?>
-    <h1>Trang chủ</h1>
 
-    <?php
-        echo "xin chào" . $_SESSTION["username"];
-    ?>
+    <h1>Trang chủ</h1>
+   
 </body>
 </html>
