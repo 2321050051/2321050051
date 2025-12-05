@@ -36,21 +36,22 @@
             include("connect.php");
             $sql = "SELECT nd.*, vt.ten_vai_tro FROM nguoi_dung nd JOIN vai_tro vt ON nd.vai_tro_id = vt.id";
             $result = mysqli_query($conn, $sql);
+            $_GET['page_layout'];
             while($row = mysqli_fetch_array($result)) {
         ?>
         
         
         <tr>
             <td><?php echo $row['ten_dang_nhap']; ?></td>
-                <td><?php echo $row['ho_ten']; ?></td>
-                <td><?php echo $row['email']; ?></td>
-                <td><?php echo $row['sdt']; ?></td>
-                <td><?php echo $row['ten_vai_tro']; ?></td>
-                <td><?php echo $row['ngay_sinh']; ?></td>
-                <td class="chuc-nang">
-                    <a class="btn sua" href="capnhatnguoidung.php?id=<?php echo $row["id"] ?>"> Cập nhật </a>
-                    <a class="btn xoa" href="xoanguoidung.php?id=<?php echo $row["id"] ?>"> Xóa </a>
-                </td>
+            <td><?php echo $row['ho_ten']; ?></td>
+            <td><?php echo $row['sdt']; ?></td>
+            <td><?php echo $row['email']; ?></td>
+            <td><?php echo $row['ten_vai_tro']; ?></td>
+            <td><?php echo $row['ngay_sinh']; ?></td>
+            <td class="chuc-nang">
+                <a class="sua" href="capnhatnguoidung.php?id=<?php echo $row["id"] ?>"> Cập nhật </a>
+                <a class="xoa" href="xoanguoidung.php?id=<?php echo $row["id"] ?>"> Xóa </a>
+            </td>
         </tr>
         <?php } ?>
     </table>

@@ -52,36 +52,54 @@
                 
             </ul>
         </nav> 
+    </header>
+    <main>
         <?php
             if(isset($_GET['page_layout'])){
                 switch($_GET['page_layout']){
                     case "trangchu":
-                    include "trangchu.php";
-                    break;
+                        include "trangchu.php";
+                        break;
 
                     case "phim":
-                    include "phim.php";
-                    break;
+                        include "phim.php";
+                        break;
 
                     case "theloai":
-                    include "theloai.php";
-                    break;
+                        include "theloai.php";
+                        break;
 
                     case "quocgia":
-                    include "quocgia.php";
-                    break;
+                        include "quocgia.php";
+                        break;
+                    
+                    case "themquocgia":
+                        include "themquocgia.php";
+                        break;
+
+                    case "capnhatquocgia":
+                        include "capnhatquocgia.php";
+                        break;
 
                     case "nguoidung":
-                    include "nguoidung.php";
-                    break;
+                        include "nguoidung.php";
+                        break;
+
+                    case "themnguoidung":
+                        include "themnguoidung.php";
+                        break;
+
+                    case "capnhatnguoidung":
+                        include "capnhatnguoidung.php";
+                        break;
 
                     case "dangxuat":
-            
-                    break;
+                        session_unset();
+                        session_destroy();
+                        break;
                 }
             }
         ?>
-    </header>
- 
+    </main>
 </body>
 </html>

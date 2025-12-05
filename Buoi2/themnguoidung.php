@@ -1,3 +1,35 @@
+<?php
+   include 'connect.php' ;
+    if(
+    !empty($_POST['ten-dang-nhap']) &&
+    !empty($_POST['password']) &&
+    !empty($_POST['ho-ten']) &&
+    !empty($_POST['email']) &&
+    !empty($_POST['so-dien-thoai']) &&
+    !empty($_POST['ngay-sinh']) &&
+    !empty($_POST['vai-tro'])
+) {
+
+    $tenDangNhap = $_POST['ten-dang-nhap'];
+    $matKhau = $_POST['password'];
+    $hoTen = $_POST['ho-ten'];
+    $email = $_POST['email'];
+    $sdt = $_POST['so-dien-thoai'];
+    $ngaySinh = $_POST['ngay-sinh'];
+    $vaiTro = $_POST['vai-tro'];
+
+    $sql = "INSERT INTO nguoi_dung
+            (ten_dang_nhap, mat_khau, ho_ten, email, sdt, ngay_sinh, vai_tro_id)
+            VALUES ('$tenDangNhap', '$matKhau', '$hoTen', '$email', '$sdt', '$ngaySinh', '$vaiTro')";
+
+    mysqli_query($conn, $sql);
+    header('location:index.php?page_layout=nguoidung');
+    exit;
+} 
+    else {  
+    echo "<p class='warning'> Vui lòng nhập đầy đủ thông tin! </p>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,34 +99,35 @@ form:hover {
 }
 
     </style>
-
 </head>
 <body>
+    <div class="container">
     <form action="index.php?page_layout=themnguoidung" method="post">
         <h1>Thêm người dùng</h1>
-        <div>
+        <div class="box">
             <p>Tên đăng nhập</p>
             <input type="text" name="ten-dang-nhap" placeholder="tên đăng nhập">
         </div>
-         <div>
+         <div class="box">
             <p>Mật khẩu</p>
             <input type="password" name="password" placeholder="mật khẩu">
         </div>
-        <div>
+        <div class="box">
             <p>Họ tên</p>
-            <input type="text" name="text" placeholder="họ tên">
+            <input type="text" name="ho-ten" placeholder="Họ tên">
         </div>
-        <div>
-            <p>Email</p>
-            <input type="email" name="username" placeholder="tên đăng nhập">
-        </div>
-         <div>
+        <div class="box">
             <p>SĐT</p>
-            <input type="text" name="password" placeholder="mật khẩu">
+            <input type="text" name="so-dien-thoai" placeholder="sdt">
         </div>
-        <div>
+        <div class="box">
+            <p>Email</p>
+            <input type="email" name="email" placeholder="email">
+        </div>
+        
+        <div class="box">
             <p>Vai trò</p>
-            <select name="vaitro" >
+            <select name="vai-tro" >
                 <option value="1">admin</option>
                 <option value="2">đạo diễn</option>
                 <option value="3">diễn viên</option>
@@ -102,38 +135,19 @@ form:hover {
               
             </select>
         </div>
-        <div>
+        <div class="box">
             <p>Ngày sinh</p>
-            <input type="date" value="đăng nhập">
+            <input type="date" name="ngay-sinh">
+
         </div>
-        <div>
+        <div class="box">
             <p>Submit</p>
             <input type="submit" value="đăng nhập">
         </div>
     </form>
-    <?php
-        if(!empty($_POST['ten-dang-nhap'])&&
-            !empty($_POST['password'])&&
-            !empty($_POST['ho-ten'])&&
-            !empty($_POST['email'])&&
-            !empty($_POST['so-dien-thoai'])&&
-            !empty($_POST['ngay-sinh'])&&
-            !empty($_POST['vai-tro'])) {
+</div>
 
-        $tenDangNhap= $POST['ten-dang-nhap'];
-        $password= $POST['password'];
-        $hoTen= $POST['ho-ten'];
-        $email= $POST['email'];
-        $soDienThoai= $POST['so-dien-thoai'];
-        $ngaySinh= $POST['ngay-sinh'];
-        $vaiTro= $POST['vai-tro'];
-        $sql= "INSERT INTO 'nguoi_dung'('ten_dang_nhap', 'mat_khau', 'ho_ten', 'email', 'sdt', 'ngay_sinh', 'vai_tro')";
-        mysqli_query($conn, $sql);
-        header('location: index.php?page_layout=nguoidung');
-        }
-        else{
-            echo "<p class='warning'>Vui lòng nhập đầy đủ thông tin!</p>";
-        }
-    ?>
+
+    
 </body>
 </html>
